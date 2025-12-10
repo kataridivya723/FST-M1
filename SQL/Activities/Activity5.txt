@@ -1,0 +1,14 @@
+--Activity5
+
+--updating the grade score of salesman from Rome to 200
+update salesman set grade=200 where salesman_city='Rome';
+
+--updating the grade score of salesman from James Hoog to 300
+update salesman set grade=300 where salesman_name='James Hoog';
+
+--updating the grade score of salesman from McLyon to Pierre
+
+update salesman set salesman_name='Pierre' where salesman_name='McLyon';
+
+--Display the data
+SELECT * FROM salesman;

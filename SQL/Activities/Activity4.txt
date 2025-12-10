@@ -1,0 +1,10 @@
+--Activity4
+
+--adding grade column
+ALTER TABLE salesman ADD grade int;
+
+--updating the values in the grade column
+update salesman set grade=100; 
+
+--display the data
+SELECT * FROM salesman;
