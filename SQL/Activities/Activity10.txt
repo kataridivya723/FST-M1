@@ -1,0 +1,25 @@
+ ---Activity10--
+
+ --Write a query to find all the orders issued against the salesman who may works for customer whose id is 3007.
+
+ SELECT * from orders
+ where salesman_id=(SELECT distinct SALESMAN_ID from orders where customer_id=30007);
+
+
+ ---- Write a query to find all orders attributed to a salesman in New York.
+
+ select * from orders
+ where salesman_id=(select salesman_id from salesman where salesman_city='New York');
+
+
+ -- Write a query to count the customers with grades above New York's average.
+
+ SELECT grade,COUNT(*) from customers
+ Group By Grade Having grade>(select AVG(grade) from customers where city='New York');
+
+
+ ---- Write a query to extract the data from the orders table for those salesman who earned the maximum commission
+
+SELECT order_no,purchase_amount, order_date, salesman_id from orders
+where salesman_id IN(select salesman_id from salesman 
+where commission=(select MAX(commission) as "MAX Commission" from salesman)); 
