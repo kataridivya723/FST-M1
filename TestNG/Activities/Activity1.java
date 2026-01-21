@@ -1,4 +1,4 @@
-package Activities;
+package TestNG;
 
 import static org.testng.Assert.assertEquals;
 
@@ -42,6 +42,7 @@ public class Activity1 {
 		driver.close();
 	}
 	
+
 
 
 
