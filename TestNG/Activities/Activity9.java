@@ -83,7 +83,8 @@ public class Activity9
     }
 
     @Test(priority = 3)
-    public void promptAlertTestCase() {
+    public void promptAlertTestCase()
+	{
         Reporter.log("promptAlertTestCase() started |");
         // Click the button to open a simple alert
         driver.findElement(By.id("prompt")).click();
@@ -108,5 +109,13 @@ public class Activity9
 
         Reporter.log("Test case ended |");
     }
+	@AfterClass
+    public void tearDown() 
+	{
+        Reporter.log("Ending Test |");
+        // Close the driver
+        driver.close();
+    }
 
 }
+
