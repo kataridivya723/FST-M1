@@ -15,7 +15,6 @@ public class Activity3_AlertTestSteps extends BaseClass
 	 
 	@Given("User is on the page")
 	public void openPage() {
-		// Open browser
 		driver.get("https://training-support.net/webelements/alerts");
 	}
  
@@ -40,8 +39,8 @@ public class Activity3_AlertTestSteps extends BaseClass
 	}
  
 	@And("Read the text from it and print it")
-	public void readAlert() {
-		System.out.println("Alert says: " + alert.getText());
+	public void readAlertText() {
+		System.out.println("Alert text: " + alert.getText());
 	}
  
 	@And("Write a custom message in it")
@@ -64,4 +63,5 @@ public class Activity3_AlertTestSteps extends BaseClass
 		String message = driver.findElement(By.id("result")).getText();
 		System.out.println("Action performed: " + message);
 	}
+
 }
