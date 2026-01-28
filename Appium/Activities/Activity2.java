@@ -40,7 +40,7 @@ public class Activity2 {
 	    public void trainingSupport() 
 	 	{
 		 // Find heading of new page and print to console
-	        String pageHeading = driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"Training Support\"]")).getText();
+	        String pageHeading = driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Training Support']")).getText();
 	        System.out.println("trainingsupport page heading is :"+pageHeading);
 	        Assert.assertEquals(pageHeading,"Training Support");
 	        
@@ -49,7 +49,7 @@ public class Activity2 {
 	        driver.findElement(AppiumBy.accessibilityId("About Us")).click();
 	      
 	        //Find AboutUs Button Page Heading
-	        String aboutButton = driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"About Us\"]")).getText();
+	        String aboutButton = driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='About Us']")).getText();
 	        System.out.println("aboutUsButtonPage Heading is:"+aboutButton);
 	      
 	      
